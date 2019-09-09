@@ -251,8 +251,19 @@ generate = function()
 		pdf.setFont("times");
 		pdf.setFontType("italic");
 		pdf.text(330,390,'Test symptoms');
-
+		
+		
 		pdf.line(60, 410,530,410);
+		
+		pdf.setFont("courier");
+		pdf.setFontType("bolditalic");
+		pdf.text(150,430,'ADHD Similarity Score');
+		
+		pdf.setFont("times");
+		pdf.setFontType("italic");
+		pdf.text(330,430,'85%');
+
+		pdf.line(60, 450,530,450);
 	    pdf.save('ADHD Report.pdf');
 };
 function headerFooterFormatting(doc, totalPages)
