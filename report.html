@@ -1,11 +1,47 @@
 <!doctype html>
 <html lang="en">
+<style>
+    .slidecontainer {
+        width: 100%;
+    }
+
+    .slider {
+        -webkit-appearance: none;
+        width: 66%;
+        height: 103.3px;
+        outline: none;
+        opacity: 1;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+        background-image: url("img/scale1.jpg");
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 5px;
+        height: 100px;
+        background: #000000;
+    }
+    cursor: pointer;
+    }
+
+    .slider::-moz-range-thumb {
+        width: 25px;
+        height: 25px;
+    }
+
+
+</style>
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="img/favicon.png" type="image/png">
-    <title>Medcare Medical</title>
+    <title>ADHD-Care</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/themify-icons.css">
@@ -16,40 +52,38 @@
     <!-- main css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
-	<script type="text/javascript" src='js/jspdf.min.js'></script>
-	<script type="text/javascript" src="js/html2canvas"></script>
 </head>
 <body>
 
 
-    <!--================Header Menu Area =================-->
-    <header>
+<!--================Header Menu Area =================-->
+<header>
 
-        <div class="main_menu">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="home.html"><img src="img/logo.png" alt=""></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="health_info.html">Contact</a></li>
-                        </ul>
-                    </div>
+    <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <a class="navbar-brand logo_h" href="home.html"><img src="img/icon.jpg" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
-    </header>
-    <!--================Header Menu Area =================-->
+            </div>
+        </nav>
+    </div>
+</header>
+<!--================Header Menu Area =================-->
 
 
     <!--================Home Banner Area =================-->
@@ -118,13 +152,15 @@
                     <div class="typography">
                         <h1 class="text-center">ADHD</h1>
                     </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-lg-12">
-                        <input type="submit" onclick="generate()" class="btn btn-primary btn-lg btn-block" value="Download Report">
+                    <div class="slidecontainer">
+                        <input type="range" min="1" max="100" value="92" class="slider" id="myRange">
                     </div>
                 </div>
-
+            </div>
+            <div class="form-group row">
+                <div class="col-lg-12">
+                    <input type="submit" onclick="generate()" class="btn btn-primary btn-lg btn-block" value="Download Report">
+                </div>
             </div>
         </div>
     </div>
