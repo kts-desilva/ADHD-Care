@@ -1,3 +1,5 @@
+import tensorflow as tf
+from werkzeug.utils import secure_filename
 from med2image import med2image
 from keras.models import load_model
 from keras.preprocessing import image
@@ -7,8 +9,7 @@ import os
 import tablib
 from flask import Flask, render_template, request, flash, redirect, request, jsonify, session,g, render_template
 import tensorflow as tf
-from werkzeug import secure_filename
-from sklearn.externals import joblib
+import joblib
 import pandas as pd
 from flask_mysqldb import MySQL
 
