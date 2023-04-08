@@ -11,7 +11,7 @@ from flask import Flask, render_template, request, flash, redirect, request, jso
 import tensorflow as tf
 import joblib
 import pandas as pd
-from flask_mysqldb import MySQL
+#from flask_mysqldb import MySQL
 
 from nipype.interfaces import fsl
 import time
