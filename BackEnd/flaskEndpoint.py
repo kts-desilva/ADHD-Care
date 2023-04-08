@@ -179,10 +179,10 @@ app = Flask(__name__)
 app.secret_key = "secret key"
 app.config['UPLOAD_FOLDER'] = '/home/adhd/adhd_cnn/dataFolder/uploads'
 
-app.config['MYSQL_HOST'] = 'localhost'
+'''app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'password'
-app.config['MYSQL_DB'] = 'ADHD'
+app.config['MYSQL_DB'] = 'ADHD''''
 
 app.config.update(dict(
     DEBUG=True,
@@ -198,7 +198,7 @@ SESSION_TYPE = 'filesystem'
 app.config.from_object(__name__)
 Session(app)
 
-mysql = MySQL(app)
+#mysql = MySQL(app)
 mail = Mail(app)
 
 @app.route('/')
